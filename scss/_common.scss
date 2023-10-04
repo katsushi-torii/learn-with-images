@@ -1,0 +1,21 @@
+// Screen
+$mobileScreen   :   300px;
+$tabletScreen   :   700px;
+$desktopScreen  :   1000px;
+
+//Color
+$color1: rgb(253, 221, 163);
+$color2: rgb(51, 145, 203);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
