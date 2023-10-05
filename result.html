@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>result page</h1>
+</body>
+<script>
+    const japanese = [
+        ["Seal", "アザラシ"],
+        ["Sea Lion", "アシカ"]
+    ] 
+    const mistakes = JSON.parse(localStorage.getItem('mistakes'));
+    console.log(mistakes);
+    $('h1').html(mistakes);
+</script>
+</html>

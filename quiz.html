@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"
     integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -338,7 +338,7 @@
             </section>
             <section class="answer">
                 <aside>正解！</aside>
-                <button onclick="result()">結果</button>
+                <button class="result">結果</button>
             </section>
         </section>
     </main>
@@ -356,6 +356,7 @@
         ["Pigeon", "Swallow", "Woodpecker"],
         ["Orca", "Blue Whale", "Sea Horse"],
     ]
+    const mistakes = [];
     function shuffleArray(array){
         for(let i = (array.length-1); i > 0; i--){
             let randomNumber = Math.floor(Math.random()*(i+1));
@@ -388,7 +389,6 @@
         let selectedAnswer = e.target.previousElementSibling.children[1].textContent;
         let realAnswer = e.target.parentElement.parentElement.parentElement.children[0].textContent;
         if(selectedAnswer == realAnswer){
-            console.log('correct');
             $('figcaption').show();
             e.target.parentElement.parentElement.parentElement.parentElement.children[2].style.display = 'flex';
             $('.check').attr('disabled',true);
@@ -397,7 +397,12 @@
             e.target.parentElement.children[0].children[1].style.display = 'flex';
             e.target.setAttribute('disabled', true);
             e.target.style.backgroundColor = 'rgb(215, 213, 213)';
+            mistakes.push(selectedAnswer);
         }
+    })
+    $('.result').click(() => {
+        localStorage.setItem('mistakes',JSON.stringify(mistakes));
+        window.location.href = './result.html'
     })
 </script>
 </html>

@@ -1,0 +1,55 @@
+@media (min-width: $tabletScreen){
+    .home {
+        h3 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 24px;
+        }
+        a {
+            font-size: 26px;
+            font-weight: 600;
+            &:hover {
+                background-color: $color1;
+            }
+        }
+    }
+
+    .quiz {
+        > section {
+            > article {
+                font-size: 28px;
+            }
+        }
+    }
+
+    .question {
+        h4 {
+            font-size: 44px;
+        }
+        figcaption {
+            font-size: 32px;
+        }
+        img {
+            border-width: 15px;
+        }
+        button {
+            font-size: 32px;
+            font-weight: 600;
+            &:hover {
+                background-color: $color1;
+            }
+        }
+    }
+    .answer {
+        > aside {
+            font-size: 28px;
+        }
+        > button {
+            font-size: 28px;
+            &:hover {
+                background-color: $color1;
+            }
+        }
+    }
+}

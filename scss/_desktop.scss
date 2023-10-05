@@ -1,0 +1,31 @@
+@media (min-width: $desktopScreen){
+    .question {
+        > section {
+            flex-direction: row;
+        }
+        aside {
+            flex-direction: column;
+            row-gap: 4vh;
+        }
+        figure {
+            height: 25vh;
+        }
+        img {
+            width: 24vw;
+            height: 16vw;
+        }
+        button {
+            height: 7vh;
+            width: 7vh;
+            font-size: 24px;
+        }
+    }
+
+    .answer {
+        button {
+            width: 7vh;
+            height: 7vh;
+            font-size: 12px;
+        }
+    }
+}
