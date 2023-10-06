@@ -10,15 +10,64 @@
     crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>result page</h1>
+    <main class="result">
+        <h3>結果 <strong>点</strong>/10</h3>
+        <article>
+            <h4>間違えた動物一覧</h4>
+            <section class="mistakeAnimals">
+            </section>
+        </article>
+    </main>
+
 </body>
 <script>
     const japanese = [
         ["Seal", "アザラシ"],
-        ["Sea Lion", "アシカ"]
+        ["Sea Lion", "アシカ"],
+        ["Walrus", "セイウチ"],
+        ["Raccoon", "アライグマ"],
+        ["Otter", "カワウソ"],
+        ["Newt", "イモリ"],
+        ["Boar", "イノシシ"],
+        ["Rhinoceros", "サイ"],
+        ["Hippopotomus", "カバ"],
+        ["Camel", "ラクダ"],
+        ["Donkey", "ロバ"],
+        ["Zebra", "シマウマ"],
+        ["Serow", "カモシカ"],
+        ["Reindeer", "トナカイ"],
+        ["Moose", "ヘラジカ"],
+        ["Sloth", "ナマケモノ"],
+        ["Hedgehog", "ハリネズミ"],
+        ["Mole", "モグラ"],
+        ["Falcon", "ハヤブサ"],
+        ["Hawk", "タカ"],
+        ["Eagle", "ワシ"],
+        ["Crane", "ツル"],
+        ["Turkey", "シチメンチョウ"],
+        ["Pheasant", "キジ"],
+        ["Pigeon", "ハト"],
+        ["Swallow", "ツバメ"],
+        ["Woodpecker", "キツツキ"],
+        ["Orca", "シャチ"],
+        ["Blue Whale", "シロナガスクジラ"],
+        ["Sea Horse", "タツノオトシゴ"],
     ] 
     const mistakes = JSON.parse(localStorage.getItem('mistakes'));
     console.log(mistakes);
-    $('h1').html(mistakes);
+    mistakes.forEach(mistake => {
+        japanese.forEach((japaneseAnimal) => {
+            if(japaneseAnimal[0] == mistake){
+                let japaneseName = japaneseAnimal[1];
+                let animal = $(`
+                    <figure>
+                        <img src="./img/${mistake}.jpg" alt="">
+                        <figcaption>${mistake}:${japaneseName}</figcaption>
+                    </figure>
+                `);
+                $('.mistakeAnimals').append(animal);
+            }
+        })
+    });
 </script>
 </html>

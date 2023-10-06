@@ -338,7 +338,7 @@
             </section>
             <section class="answer">
                 <aside>正解！</aside>
-                <button class="result">結果</button>
+                <button class="goResult">結果</button>
             </section>
         </section>
     </main>
@@ -400,7 +400,7 @@
             mistakes.push(selectedAnswer);
         }
     })
-    $('.result').click(() => {
+    $('.goResult').click(() => {
         localStorage.setItem('mistakes',JSON.stringify(mistakes));
         window.location.href = './result.html'
     })
