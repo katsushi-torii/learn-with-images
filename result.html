@@ -53,6 +53,8 @@
         ["Blue Whale", "シロナガスクジラ"],
         ["Sea Horse", "タツノオトシゴ"],
     ] 
+    const score = localStorage.getItem('score');
+    $('strong').html(10 - score);
     const mistakes = JSON.parse(localStorage.getItem('mistakes'));
     console.log(mistakes);
     mistakes.forEach(mistake => {
