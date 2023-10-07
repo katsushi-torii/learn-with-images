@@ -1,18 +1,15 @@
 @media (min-width: $desktopScreen){
-    .question {
+    .quiz {
         > section {
-            flex-direction: row;
+            row-gap: 3vh;
         }
+    }
+    .question {
         aside {
-            flex-direction: column;
             row-gap: 4vh;
         }
         figure {
-            height: 25vh;
-        }
-        img {
-            width: 24vw;
-            height: 16vw;
+            min-height: 40vh;
         }
         button {
             height: 7vh;
@@ -26,6 +23,25 @@
             width: 7vh;
             height: 7vh;
             font-size: 12px;
+        }
+    }
+
+    .result {
+         h4 {
+            padding-left: 2vw;
+         }
+    }
+
+    .mistakeAnimals {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 2vw;
+        img {
+            width: 28vw;
+            height: 18vw;
+        }
+        figcaption {
+            font-size: 20px;
         }
     }
 }

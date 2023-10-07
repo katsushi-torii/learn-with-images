@@ -44,13 +44,13 @@
         }
     }
     .question {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
         h4 {
             align-self: center;
             font-size: 30px;
         }
-        display: flex;
-        flex-direction: column;
-        row-gap: 3vh;
         > section {
             display: flex;
             flex-direction: column;
@@ -114,9 +114,11 @@
         flex-direction: column;
         row-gap: 2vh;
         align-items: center;
+        padding-top: 5vh;
         > article {
             display: flex;
             flex-direction: column;
+            row-gap: 1vh;
         }
     }
 

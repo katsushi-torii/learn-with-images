@@ -24,21 +24,34 @@
     }
 
     .question {
+        height: 60vh;
+        justify-content: center;
+        > section {
+            flex-direction: row;
+        }
+        aside {
+            flex-direction: column;
+            row-gap: 2vh;
+        }
         h4 {
-            font-size: 44px;
+            font-size: 40px;
+        }
+        figure {
+            min-height: 28vh;
         }
         figcaption {
             font-size: 32px;
         }
         img {
+            width: 24vw;
+            height: 16vw;
             border-width: 15px;
         }
         button {
+            height: 5vh;
+            width: 5vh;
             font-size: 32px;
             font-weight: 600;
-            &:hover {
-                background-color: $color1;
-            }
         }
     }
     .answer {
@@ -50,6 +63,21 @@
             &:hover {
                 background-color: $color1;
             }
+        }
+    }
+
+    .result {
+        h3 {
+            font-size: 32px;
+        }
+        h4 {
+            font-size: 28px;
+        }
+    }
+
+    .mistakeAnimals {
+        figcaption {
+            font-size: 28px;
         }
     }
 }
